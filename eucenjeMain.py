@@ -1,0 +1,1 @@
+#poziva api (bazaInit pretpostavljam) i asinkrono salje dictionary u worker tokenizer mikroservisu

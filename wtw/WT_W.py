@@ -22,7 +22,7 @@ async def wt(request):
 
         async with aiohttp.ClientSession() as s:
             r = await s.post(
-                "http://127.0.0.1:8004/gatherData", json=data
+                "http://gatherdata:8004/gatherData", json=data
             )
             print(r)
         return web.json_response(

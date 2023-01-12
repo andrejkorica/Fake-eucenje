@@ -11,14 +11,14 @@ async def getAPI(a):
     try:
         tasks = []
         async with aiohttp.ClientSession() as session:
-            req = await session.get("http://127.0.0.1:8000/getData")
+            req = await session.get("http://bazainit:8000/getData")
             req = await req.json()
             
             tasks.append(
-                asyncio.create_task(session.post("http://127.0.0.1:8002/wt", json=req))
+                asyncio.create_task(session.post("http://wtw:8002/wt", json=req))
             )
             tasks.append(
-                asyncio.create_task(session.post("http://127.0.0.1:8003/wt", json=req))
+                asyncio.create_task(session.post("http://wtd:8003/wt", json=req))
             )
 
             await asyncio.gather(*tasks)

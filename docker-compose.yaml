@@ -1,0 +1,26 @@
+services:
+  bazainit:
+    build: bazainit
+    command: ["python", "./BazaInit.py"]
+    ports:
+      - "8000:8000"
+  eucenjemain:
+    build: eucenjemain
+    command: ["python", "./eucenjeMain.py"]
+    ports:
+      - "8001:8001"
+  wtw:
+    build: wtw
+    command: ["python", "./WT_W.py"]
+    ports:
+      - "8002:8002"
+  wtd:
+    build: wtd
+    command: ["python", "./WT_D.py"]
+    ports:
+      - "8003:8003"
+  gatherdata:
+    build: gatherdata
+    command: ["python", "./gatherData.py"]
+    ports:
+      - "8004:8004"
